@@ -9,60 +9,67 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #0a1628;
-            color: #e0e0e0;
+            background: #0F1625;
+            color: #F1F5F9;
             line-height: 1.6;
         }
         nav {
-            background: #0d1f3c;
+            background: linear-gradient(180deg, #1E293B, #172032);
             padding: 16px 24px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            border-bottom: 1px solid #1a3a5c;
+            border-bottom: 1px solid #324255;
         }
         nav .brand {
             font-size: 18px;
             font-weight: 700;
-            color: #00e5ff;
+            color: #00D4FF;
             text-decoration: none;
         }
         nav .links a {
-            color: #90caf9;
+            color: #94A3B8;
             text-decoration: none;
             margin-left: 24px;
             font-size: 14px;
+            transition: color 0.2s;
         }
-        nav .links a:hover { color: #00e5ff; }
+        nav .links a:hover { color: #00D4FF; }
         .hero {
             text-align: center;
             padding: 80px 24px 60px;
-            background: linear-gradient(180deg, #0d1f3c 0%, #0a1628 100%);
+            background: linear-gradient(180deg, #1C2333 0%, #0F1625 100%);
         }
         .hero h1 {
-            font-size: 48px;
+            font-size: 52px;
             font-weight: 800;
             color: #ffffff;
             margin-bottom: 16px;
+            letter-spacing: 2px;
         }
-        .hero h1 span { color: #00e5ff; }
+        .hero h1 span {
+            color: #00D4FF;
+            text-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+        }
         .hero p {
             font-size: 20px;
-            color: #90caf9;
+            color: #94A3B8;
             max-width: 600px;
             margin: 0 auto 32px;
         }
         .badge {
             display: inline-block;
-            background: #1a3a5c;
-            color: #00e5ff;
-            padding: 10px 24px;
-            border-radius: 8px;
+            background: linear-gradient(180deg, #2a5a3a, #1a4a2a);
+            color: #00E676;
+            padding: 12px 28px;
+            border-radius: 10px;
             font-size: 14px;
-            font-weight: 600;
+            font-weight: 700;
+            border: 1px solid #2a6a3a;
+            box-shadow: 0 4px 12px rgba(0, 230, 118, 0.15);
         }
         .features {
-            max-width: 800px;
+            max-width: 840px;
             margin: 0 auto;
             padding: 60px 24px;
         }
@@ -78,46 +85,58 @@
             gap: 20px;
         }
         .feature-card {
-            background: #0d1f3c;
-            border: 1px solid #1a3a5c;
-            border-radius: 12px;
-            padding: 24px;
+            background: linear-gradient(180deg, #243348, #1E293B);
+            border: 1px solid #324255;
+            border-radius: 14px;
+            padding: 28px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .feature-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 212, 255, 0.1);
+        }
+        .feature-card .icon {
+            font-size: 28px;
+            margin-bottom: 12px;
         }
         .feature-card h3 {
-            color: #00e5ff;
-            font-size: 16px;
+            color: #00D4FF;
+            font-size: 17px;
             margin-bottom: 8px;
         }
         .feature-card p {
-            color: #90caf9;
+            color: #94A3B8;
             font-size: 14px;
+            line-height: 1.6;
         }
         .contact {
             text-align: center;
             padding: 60px 24px;
-            border-top: 1px solid #1a3a5c;
+            border-top: 1px solid #324255;
         }
         .contact h2 {
             font-size: 24px;
             color: #ffffff;
             margin-bottom: 12px;
         }
+        .contact p { color: #94A3B8; }
         .contact a {
-            color: #00e5ff;
+            color: #00D4FF;
             text-decoration: none;
+            transition: color 0.2s;
         }
         .contact a:hover { text-decoration: underline; }
         footer {
             text-align: center;
             padding: 24px;
-            color: #5a7a9a;
+            color: #64748B;
             font-size: 13px;
-            border-top: 1px solid #1a3a5c;
+            border-top: 1px solid #324255;
         }
-        footer a { color: #5a7a9a; text-decoration: none; }
-        footer a:hover { color: #90caf9; }
+        footer a { color: #64748B; text-decoration: none; transition: color 0.2s; }
+        footer a:hover { color: #94A3B8; }
         @media (max-width: 600px) {
-            .hero h1 { font-size: 32px; }
+            .hero h1 { font-size: 36px; }
             .hero p { font-size: 16px; }
             .feature-grid { grid-template-columns: 1fr; }
         }
@@ -142,20 +161,34 @@
         <h2>Features</h2>
         <div class="feature-grid">
             <div class="feature-card">
-                <h3>60 Campaign Levels</h3>
-                <p>Three difficulty modes — Easy, Medium, and Hard. Progress through increasingly challenging network puzzles.</p>
+                <div class="icon">🧩</div>
+                <h3>180 Campaign Levels</h3>
+                <p>Three difficulty modes — Easy, Medium, and Hard — with 60 levels each. Progress through increasingly challenging network puzzles.</p>
             </div>
             <div class="feature-card">
+                <div class="icon">📅</div>
                 <h3>Daily Puzzles</h3>
-                <p>A fresh challenge every day. Come back daily for a new puzzle to solve.</p>
+                <p>A fresh challenge every day. Come back daily for a new puzzle to solve and build your streak.</p>
             </div>
             <div class="feature-card">
+                <div class="icon">♾️</div>
                 <h3>Endless Mode</h3>
-                <p>Unlimited randomly generated puzzles. Play as much as you want, whenever you want.</p>
+                <p>Unlimited randomly generated puzzles across three difficulty levels. Play as much as you want, whenever you want.</p>
             </div>
             <div class="feature-card">
+                <div class="icon">☁️</div>
                 <h3>Cloud Save</h3>
                 <p>Sign in with Google to sync your progress across devices. Your stars and achievements travel with you.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">🔍</div>
+                <h3>Pinch to Zoom</h3>
+                <p>Zoom into larger grids for precision. Single-finger pan when zoomed in to navigate the puzzle with ease.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">💡</div>
+                <h3>Hints &amp; Undo</h3>
+                <p>Stuck on a puzzle? Use hints to get unstuck. Made a wrong move? Undo it without penalty to keep your star rating.</p>
             </div>
         </div>
     </div>
