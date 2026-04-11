@@ -64,16 +64,22 @@
             max-width: 600px;
             margin: 0 auto 32px;
         }
-        .badge {
+        .play-badge {
             display: inline-block;
-            background: linear-gradient(180deg, #2a5a3a, #1a4a2a);
-            color: #00E676;
-            padding: 12px 28px;
-            border-radius: 10px;
-            font-size: 14px;
-            font-weight: 700;
-            border: 1px solid #2a6a3a;
-            box-shadow: 0 4px 12px rgba(0, 230, 118, 0.15);
+            transition: transform 0.2s;
+        }
+        .play-badge:hover {
+            transform: scale(1.05);
+        }
+        .play-badge img {
+            height: 60px;
+        }
+        .app-icon {
+            width: 120px;
+            height: 120px;
+            border-radius: 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
         }
         .features {
             max-width: 840px;
@@ -159,9 +165,13 @@
     </nav>
 
     <div class="hero">
+        <img src="app_icon.png" alt="Net Connect" class="app-icon">
+        <br>
         <h1><span>Net</span> Connect</h1>
         <p>A network puzzle game where you rotate tiles to connect all devices to the server. Plan your moves, solve the network, and earn stars!</p>
-        <span class="badge">Coming Soon on Google Play</span>
+        <a href="https://play.google.com/store/apps/details?id=com.netconnect.game" class="play-badge">
+            <img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png">
+        </a>
     </div>
 
     <div class="features">
